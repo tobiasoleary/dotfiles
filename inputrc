@@ -1,0 +1,25 @@
+###########################
+## .inputrc
+##
+
+############################
+## ON
+
+# Narrow history search based on what's been typed.
+# So if you type rake and use the arrows keys you only see command that begin with rake.
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# ignore case so ~/deskto[TAB] will complete to ~/Desktop/
+set completion-ignore-case on
+
+############################
+## OFF - YOU SHALL NOT PASS
+############################
+
+# Don't have to hit tab twice to see a completion list. (Mutally Exclusive with `TAB: manu-complete`)
+set show-all-if-ambiguous on
+
+
+# Don't dump a huge list let Repeated TABs cycle through the completion. (Mutally Exclusive with `set show-all-if-ambiguous on`)
+TAB: menu-complete 

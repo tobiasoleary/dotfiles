@@ -1,0 +1,6 @@
+###########################
+## .gemrc
+##
+
+# Don't do the whole ri documentation stuff
+gem: --no-ri
