@@ -13,18 +13,16 @@
 # ignore case so ~/deskto[TAB] will complete to ~/Desktop/
 set completion-ignore-case on
 
-# Don't dump a huge list let Repeated TABs cycle through the completion. (Mutally Exclusive with `set show-all-if-ambiguous on`)
-TAB: menu-complete
-
-# Shift-Tab will go back on menu-complete
-"\e[Z": "\e-1\C-i" 
-
 # ############################
 # ## OFF - YOU SHALL NOT PASS
 # ############################
 #
+# # Don't dump a huge list let Repeated TABs cycle through the completion. (Mutally Exclusive with `set show-all-if-ambiguous on`)
+# TAB: menu-complete
+# "\e[Z": "\e-1\C-i" # Shift-Tab will go back on menu-complete
+#
 # # Don't have to hit tab twice to see a completion list. (Mutally Exclusive with `TAB: menu-complete`)
 # set show-all-if-ambiguous on
-
-
-
+#
+#
+#
