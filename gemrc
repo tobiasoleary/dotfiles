@@ -2,5 +2,5 @@
 ## .gemrc
 ##
 
-# Don't do the whole ri documentation stuff
-gem: --no-ri
+# Don't do the whole documentation stuff
+gem: --no-document --no-ri --no-rdoc
