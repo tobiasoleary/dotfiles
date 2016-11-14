@@ -1,93 +1,80 @@
-# .profile
+#############################################
+#### .profile
+####
 
 ########################
 ## Setup Path
+##
 
-# Setup Path Variables - NOTE: The seperator is in the variables
+# Lower Indices have higher precedence.
+BIN_PATHS[0]="$HOME/.home-bin"
+BIN_PATHS[1]="/usr/local/bin"
+BIN_PATHS[2]="$HOME/.rbenv/bin"
+BIN_PATHS[3]="/usr/local/rbenv/bin" # Sometimes I put rbenv files here.
 
+index=${#BIN_PATHS[*]}
+while [ $index -gt 0 ]; do
+  ((index--))
+  
+  currpath=${BIN_PATHS[$index]}
+    
+  if [ -d $currpath ]; then 
+    export PATH=$currpath:$PATH;
+  fi
+  
+done
 
-HOME_BIN_PATH="$HOME/.home-bin"
-BREW_PATH="/usr/local/bin"
-RBENV_PATH="$HOME/.rbenv/bin"
-RBENV_LOCAL_PATH="/usr/local/rbenv/bin" # Sometimes I make rbenv files install into this non-standard dir
+unset index
+unset currpath
+unset BIN_PATHS
 
-if [ -d $HOME_BIN_PATH ]; then
-  HOME_BIN_PATH="$HOME_BIN_PATH:"
-else
-  HOME_BIN_PATH=""
+########################
+## Enable rbenv
+##
+
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
 fi
 
-if [ -d BREW_PATH ]; then
-  BREW_PATH="$BREW_PATH:"
-else
-  BREW_PATH=""
-fi
+########################
+## Source Other Files
+##
 
-if [ -d RBENV_PATH ]; then
-  RBENV_PATH="$RBENV_PATH:"
-else
-  RBENV_PATH=""
-fi
+SOURCE_PATHS[0]=$HOME/.bashrc
+SOURCE_PATHS[1]=$HOME/.bash_aliases
+SOURCE_PATHS[2]=$HOME/.project_aliases
 
-if [ -d RBENV_LOCAL_PATH ]; then
-  RBENV_LOCAL_PATH="$RBENV_LOCAL_PATH:"
-else
-  RBENV_LOCAL_PATH=""
-fi
+for currpath in "${SOURCE_PATHS[@]}"; do
+  if [ -f $currpath ]; then
+    source $currpath;
+  fi
+done
 
-export PATH="$HOME_BIN_PATH$BREW_PATH$RBENV_PATH$RBENV_LOCAL_PATH$PATH"
-
-# Enable rbenv
-if which rbenv > /dev/null; then 
-	eval "$(rbenv init -)"; 
-fi
-
-# Import .bashrc if avaialble
-if [ -f $HOME/.bashrc ]; then
-	source $HOME/.bashrc
-fi
-
-# Import .bash_aliases if available
-if [ -f $HOME/.bash_aliases ]; then
-	source $HOME/.bash_aliases;
-fi
+unset currpath
+unset SOURCE_PATHS
 
 ##########################
 ## Setup Bash Completions
+##
 
-DOCKER_COMPLETION="/usr/local/etc/bash_completion.d/docker"
-BREW_COMPLETION="/usr/local/etc/bash_completion.d/brew"
-NODE_COMPLETION="/usr/local/etc/bash_completion.d/node"
-GIT_COMPLETION="/usr/local/etc/bash_completion.d/git-completion.bash"
-WASTON_COMPLETION="/usr/local/etc/bash_completion.d/watson"
+COMPLETION_PATHS[0]="/usr/local/etc/bash_completion.d/docker"
+COMPLETION_PATHS[1]="/usr/local/etc/bash_completion.d/brew"
+COMPLETION_PATHS[2]="/usr/local/etc/bash_completion.d/npm"
+COMPLETION_PATHS[3]="/usr/local/etc/bash_completion.d/git-completion.bash"
+COMPLETION_PATHS[4]="/usr/local/etc/bash_completion.d/watson"
 
-# Bash Completion for Docker
-if [ -f $DOCKER_COMPLETION ]; then
-	source $DOCKER_COMPLETION;
-fi
+for currpath in "${COMPLETION_PATHS[@]}"; do
+  if [ -f $currpath ]; then
+    source $currpath;
+  fi
+done
 
-# Bash Completion for Brew (Homebrew)
-if [ -f $BREW_COMPLETION ]; then
-	source $BREW_COMPLETION;
-fi
-
-# Bash Completion for Node
-if [ -f $NODE_COMPLETION ]; then
-	source $NODE_COMPLETION;
-fi
-
-# Bash Completion for Git
-if [ -f $GIT_COMPLETION ]; then
-	source $GIT_COMPLETION;
-fi
-
-# Bash Completion for Git
-if [ -f $WASTON_COMPLETION ]; then
-	source $WASTON_COMPLETION;
-fi
+unset currpath
+unset COMPLETION_PATHS
 
 ##########################
 ## Setup Prompt
+##
 
 GIT_PROMPT="/usr/local/etc/bash_completion.d/git-prompt.sh"
 
@@ -96,7 +83,6 @@ PS1="\u@\h \W \$ "
 
 # Modify Prompt with Git
 if [ -f $GIT_PROMPT ]; then
-	source $GIT_PROMPT;
+  source $GIT_PROMPT;
   PS1="\u@\h \W\$(__git_ps1 \":%s\")\$ "
 fi
-

@@ -2,16 +2,19 @@
 ## .bashrc
 ##
 
+
 # Setup Timezone
 if [ -f "/usr/share/zoneinfo/America/New_York" ]; then
 	export TZ="/usr/share/zoneinfo/America/New_York"
 fi
 
-# Setup Editor (Mate else Sublime)
+# Setup Editor (Mate, else Sublime, else Atom)
 if [ -e "/usr/local/bin/mate" ]; then
 	export EDITOR="/usr/local/bin/mate -w" 	#Set Default Editor to TextMate
 elif [ -e "/usr/local/bin/subl" ]; then 
 	export EDITOR="/usr/local/bin/subl -n -w" #Set Default Editor to Sublime (New Window)
+elif [ -e "/usr/local/bin/atom" ]; then
+  export EDITOR="/usr/local/bin/atom -n -w"
 fi
 
 ##############################

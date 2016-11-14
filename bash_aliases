@@ -5,7 +5,7 @@
 #####################################
 #### - Functions
 #### - Aliases
-####
+#### 
 
 #############################
 ## Functions
@@ -17,21 +17,26 @@
 ## Quick Opening
 ##
 
-#opens web page 
-http() {
+#opens web page with http
+function http {
 	open "http://$1"
 }
 
-https() {
+#opens web page with https
+function https {
 	open "https://$1"
 }
 
-www() {
+#opens web page with https
+function www {
   open "https://$1"
 }
 
-localhost() {
-  open "http://localhost:$1" #Open localhost at a given port number
+#opens web at localhost
+# $1 - portnumber
+# $2 - path
+function localhost {
+  open "http://localhost:$1$2"
 }
 
 # cd into whatever is the forefront Finder window.
@@ -56,7 +61,7 @@ cdf() {  # short for cdfinder
 
 
 #####################
-## Enhancing Common Commands
+## Overriding / Enhancing Common Commands
 ##
 
 alias ls="ls -FG"
@@ -70,12 +75,14 @@ alias fgrep='fgrep --color=auto'
 alias mkdir='mkdir -pv'
 alias ping='ping -c 5'
 
+alias mate="mate --recent"
+
 #####################
 ## Quick Terminal
 ##
 
-alias c="echo '$> clear'; clear"
-alias h="echo '$> history'; history"
+alias c="clear"
+alias h="history"
 
 #####################
 ## Quick Opening
@@ -118,6 +125,8 @@ if which mate > /dev/null; then
   QUICK_EDITOR="mate"
 elif which subl > /dev/null; then
   QUICK_EDITOR="subl -n"
+elif which atom > /dev/null; then
+  QUICK_EDITOR="atom -n"
 elif [ ! -z "$EDITOR" ]; then 
   QUICK_EDITOR="$EDITOR"
 fi 
@@ -131,6 +140,8 @@ if [ ! -z QUICK_EDITOR ]; then
   alias bashrc="$QUICK_EDITOR $HOME/.bashrc"
   alias phpini="$QUICK_EDITOR /etc/php.ini"
 fi
+
+unset QUICK_EDITOR
 
 #####################
 ## Quick SSH
