@@ -1,4 +1,4 @@
-# Custom .profile for tobiasoleary@Gibet
+# .profile
 
 ########################
 ## Setup Path
