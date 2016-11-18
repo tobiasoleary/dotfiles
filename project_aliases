@@ -4,6 +4,6 @@
 ## Aliases for the AmEx Reserve Project
 ##
 
-alias jira="open https://shockoe.atlassian.net/secure/RapidBoard.jspa?rapidView=93&projectKey=AMEX&view=planning&selectedIssue=AMEX-227"
+alias sprint='open https://shockoe.atlassian.net/secure/RapidBoard.jspa?rapidView=93&quickFilter=189'
 alias repo="open https://bitbucket.org/shockoe/reserve-ios"
 alias timelog="open https://app.10000ft.com"

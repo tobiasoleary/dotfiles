@@ -5,6 +5,8 @@
 .gitconfig 
 ignore/
 *.ignore.*
+*.local.*
+local/
 
 # Kalidescope generate file
 *.orig 
@@ -46,9 +48,3 @@ ignore/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Kaleidoscope       #
-######################
-*.orig #After mergetool Kaleidoscope saves the original file.
-
-
