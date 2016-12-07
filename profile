@@ -9,8 +9,10 @@
 # Lower Indices have higher precedence.
 BIN_PATHS[0]="$HOME/.home-bin"
 BIN_PATHS[1]="/usr/local/bin"
-BIN_PATHS[2]="$HOME/.rbenv/bin"
-BIN_PATHS[3]="/usr/local/rbenv/bin" # Sometimes I put rbenv files here.
+BIN_PATHS[2]="/usr/local/opt/groovy/libexec/bin" # Groovy
+BIN_PATHS[3]="$HOME/.rbenv/bin"
+BIN_PATHS[4]="/usr/local/rbenv/bin" # Sometimes I put rbenv files here.
+
 
 index=${#BIN_PATHS[*]}
 while [ $index -gt 0 ]; do

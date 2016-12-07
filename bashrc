@@ -17,6 +17,13 @@ elif [ -e "/usr/local/bin/atom" ]; then
   export EDITOR="/usr/local/bin/atom -n -w"
 fi
 
+#Groovy Setup
+
+if [ -d "/usr/local/opt/groovy/libexec" ]; then
+  export GROOVY_HOME="/usr/local/opt/groovy/libexec"
+fi
+
+
 ##############################
 ## OFF - YOU SHALL NOT PASS
 ##############################
