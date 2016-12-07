@@ -6,8 +6,8 @@
 
 alias timelog="open https://app.10000ft.com"
 
-alias bitbucket='https://bitbucket.org/account/user/shockoe/projects/AMEX'
-alias jira='https://shockoe.atlassian.net/browse/AMEX'
+alias bitbucket='www bitbucket.org/account/user/shockoe/projects/AMEX'
+alias jira='www shockoe.atlassian.net/browse/AMEX'
 
 alias sprint='open https://shockoe.atlassian.net/secure/RapidBoard.jspa?rapidView=93&quickFilter=189'
 alias repo='open https://bitbucket.org/shockoe/reserve-ios'
