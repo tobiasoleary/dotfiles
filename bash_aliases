@@ -160,10 +160,19 @@ alias resource="source ~/.profile"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com;"
 alias git-warning-fix="rm .git/refs/remotes/origin/HEAD && get fetch --all"
 alias clean-xcode-profiles="rm ~/Library/MobileDevice/Provisioning\ Profiles/*"
+alias pull-dotfiles="cd ~/.dotfiles && git pull"
+
+# Argument $1 is the commit message
+function push-dotfiles {
+  cd ~/.dotfiles && git add . && git commit -m "$1" && git push
+}
+
 
 #requires wget
 if which wget > /dev/null; then 
   alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip;"
+else
+  alias speedtest="echo 'speedtest - requires wget to be installed.'"
 fi
 
 #####################
