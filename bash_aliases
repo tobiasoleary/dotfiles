@@ -159,6 +159,7 @@ alias fastping='ping -c 5 -s2'
 alias resource="source ~/.profile"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com;"
 alias git-warning-fix="rm .git/refs/remotes/origin/HEAD && get fetch --all"
+alias clean-xcode-profiles="rm ~/Library/MobileDevice/Provisioning\ Profiles/*"
 
 #requires wget
 if which wget > /dev/null; then 
