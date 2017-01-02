@@ -104,9 +104,10 @@ alias dash="open /Applications/Dash.app"
 alias xcode="open /Applications/Xcode.app"
 
 ## Sites
-
 alias github="open https://github.com"
-
+alias bitbucket="open https://bitbucket.com"
+alias google="open https://google.com"
+alias timelog="open https://app.10000ft.com"
 
 
 #####################
