@@ -1,0 +1,24 @@
+[user]
+	name = Tobias O'Leary
+	email = tobiasoleary@mac.com
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[alias]
+	co = checkout
+	st = status
+	br = branch
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
