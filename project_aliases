@@ -6,7 +6,7 @@
 ## Aliases for the AmEx Reserve Project
 ##
 
-alias amex-token='open file:///Applications/CA/arcot/OTPDesktop/html/index.html'
+alias amex-token='open -a /Applications/Safari.app file:///Applications/CA/arcot/OTPDesktop/html/index.html'
 alias amex-vpn='open /Applications/Pulse\ Secure.app'
 
 alias amex-cd='cd $HOME/projects/amex-reserve-ios'
