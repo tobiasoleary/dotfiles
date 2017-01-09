@@ -11,17 +11,25 @@ alias amex-vpn='open /Applications/Pulse\ Secure.app'
 
 alias amex-cd='cd $HOME/projects/amex-reserve-ios'
 alias amex-sprint='open https://shockoe.atlassian.net/secure/RapidBoard.jspa?projectKey=AMEX'
-alias amex-jira='open https://shockoe.atlassian.net/browse/AMEX'
 alias amex-code="open $HOME/projects/amex-reserve-ios/app-code/Reserve.xcworkspace"
 alias amex-repo='open https://bitbucket.org/shockoe/reserve-ios'
+
+function amex-jira {
+	ticketNumber="$1"
+	if [ ! -z $ticketNumber ]; then
+		open "https://shockoe.atlassian.net/browse/AMEX-$ticketNumber"
+	else
+		open https://shockoe.atlassian.net/browse/AMEX
+	fi
+}
 
 
 ##############################################
 ## Aliases for Sight Reading Factory Project
 ##
 
-alias srf-cd='cd $HOME/projects/srf-ios'
+alias srf-cd='cd $HOME/projects/srf-app'
 alias srf-jira='open https://sightreadingfactory.atlassian.net/projects/SRF/'
-alias srf-code="open $HOME/projects/srf-ios/app-code/Reserve.xcworkspace"
+alias srf-code="open $HOME/projects/srf-app/app-code/SRF.xcworkspace"
 alias srf-repo='open https://bitbucket.org/shockoe/reserve-ios'
 
