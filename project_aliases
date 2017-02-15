@@ -33,3 +33,11 @@ alias srf-jira='open https://sightreadingfactory.atlassian.net/projects/SRF/'
 alias srf-code="open $HOME/projects/srf-app/app-code/SRF.xcworkspace"
 alias srf-repo='open https://bitbucket.org/shockoe/reserve-ios'
 
+function srf-jira {
+	ticketNumber="$1"
+	if [ ! -z $ticketNumber ]; then
+		open "https://sightreadingfactory.atlassian.net/browse/SRF-$ticketNumber"
+	else
+		open https://sightreadingfactory.atlassian.net/browse/SRF/
+	fi
+}
