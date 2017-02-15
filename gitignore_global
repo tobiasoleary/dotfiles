@@ -5,8 +5,11 @@
 .gitconfig 
 ignore/
 *.ignore.*
-*.local.*
-local/
+*.ignore
+tmp/
+*.tmp.*
+*.tmp
+
 build/
 
 # Kalidescope generate file
