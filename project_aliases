@@ -29,7 +29,6 @@ function amex-jira {
 ##
 
 alias srf-cd='cd $HOME/projects/srf-app'
-alias srf-jira='open https://sightreadingfactory.atlassian.net/projects/SRF/'
 alias srf-code="open $HOME/projects/srf-app/app-code/SRF.xcworkspace"
 alias srf-repo='open https://bitbucket.org/shockoe/reserve-ios'
 
