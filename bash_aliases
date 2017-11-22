@@ -102,6 +102,7 @@ alias sequelpro="open /Applications/Sequel\ Pro.app"
 alias transmit="open /Applications/Transmit.app"
 alias dash="open /Applications/Dash.app"
 alias xcode="open /Applications/Xcode.app"
+alias contacts="open /Applications/Contacts.app"
 
 ## Sites
 alias github="open https://github.com"
