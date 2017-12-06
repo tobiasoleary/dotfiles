@@ -167,7 +167,7 @@ alias pull-dotfiles="cd ~/.dotfiles && git pull"
 
 # Argument $1 is the commit message
 function push-dotfiles {
-  cd ~/.dotfiles && git add . && git commit -m "$1" && git push
+  cd ~/.dotfiles && git add . && git commit -m "$1" && git push && cd -
 }
 
 
