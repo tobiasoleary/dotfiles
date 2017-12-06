@@ -103,6 +103,7 @@ alias transmit="open /Applications/Transmit.app"
 alias dash="open /Applications/Dash.app"
 alias xcode="open /Applications/Xcode.app"
 alias contacts="open /Applications/Contacts.app"
+alias itunes="open /Applications/iTunes.app"
 
 ## Sites
 alias github="open https://github.com"
