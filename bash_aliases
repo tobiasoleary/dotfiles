@@ -92,7 +92,7 @@ alias h="history"
 alias acorn="open /Applications/Acorn.app"
 alias timekeeper="open /Applications/TimeKeeper.app"
 alias safari="open /Applications/Safari.app"
-alias chrome="open /Applications/Chrome.app"
+alias chrome="open /Applications/Google\ Chrome.app"
 alias firefox="open -a /Applications/Firefox.app"
 alias mail="open /Applications/Mail.app"
 alias slack="open /Applications/Slack.app"
@@ -104,6 +104,7 @@ alias dash="open /Applications/Dash.app"
 alias xcode="open /Applications/Xcode.app"
 alias contacts="open /Applications/Contacts.app"
 alias itunes="open /Applications/iTunes.app"
+alias postman="open /Applications/Postman.app"
 
 ## Sites
 alias github="open https://github.com"
@@ -200,6 +201,10 @@ alias nginx-stop="nginx -s stop"
 alias mysql-start="mysql.server start"
 alias mysql-restart="mysql.server restart"
 alias mysql-stop="mysql.server stop"
+
+## MONGODB
+alias mongodb-start="brew services start mongodb"
+alias mongodb-stop="brew services stop mongodb"
 
 #####################
 ## Ruby & Rails Helpers
