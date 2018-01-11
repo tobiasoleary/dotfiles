@@ -106,6 +106,8 @@ alias contacts="open /Applications/Contacts.app"
 alias itunes="open /Applications/iTunes.app"
 alias postman="open /Applications/Postman.app"
 alias reminders="open /Applications/Reminders.app"
+alias messages="open /Applications/Messages.app"
+alias fb-messenger="open /Applications/Messenger.app"
 
 ## Sites
 alias github="open https://github.com"

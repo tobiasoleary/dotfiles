@@ -5,7 +5,8 @@
 ##############################################
 ## Aliases for SHKO Review of Systems (ROS) Project
 ##
-alias ros-cd='cd $HOME/projects/ros-app'
+alias ros-atom='atom $HOME/projects/ros-app/app'
+alias ros-cd='cd $HOME/projects/ros-app/app'
 alias ros-github='open https://github.com/shkomedicine/form_project_MEAN'
 alias ros-sprint='open https://shkomedicine.atlassian.net/secure/RapidBoard.jspa?projectKey=ROS'
 alias ros-devsite='open http://dev-shko.tobiasoleary.com'
@@ -23,6 +24,7 @@ function ros-jira {
 ##############################################
 ## Aliases for SHKO PDMP Project
 ##
+alias pdmp-atom='atom $HOME/projects/pipeline'
 alias pdmp-cd='cd $HOME/projects/pipeline'
 alias pdmp-sprint='open https://shkomedicine.atlassian.net/secure/RapidBoard.jspa?projectKey=PDMP'
 alias pdmp-github='open https://github.com/shkomedicine/shko-pipeline'
