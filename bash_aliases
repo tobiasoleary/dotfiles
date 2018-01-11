@@ -105,6 +105,7 @@ alias xcode="open /Applications/Xcode.app"
 alias contacts="open /Applications/Contacts.app"
 alias itunes="open /Applications/iTunes.app"
 alias postman="open /Applications/Postman.app"
+alias reminders="open /Applications/Reminders.app"
 
 ## Sites
 alias github="open https://github.com"

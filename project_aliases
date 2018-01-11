@@ -3,45 +3,36 @@
 ##
 
 ##############################################
-## Aliases for SHKO Medicine
+## Aliases for SHKO Review of Systems (ROS) Project
 ##
+alias ros-cd='cd $HOME/projects/ros-app'
+alias ros-github='open https://github.com/shkomedicine/form_project_MEAN'
+alias ros-sprint='open https://shkomedicine.atlassian.net/secure/RapidBoard.jspa?projectKey=ROS'
+alias ros-devsite='open http://dev-shko.tobiasoleary.com'
 
-
-##############################################
-## Aliases for the AmEx Reserve Project
-##
-
-alias amex-token='open -a /Applications/Safari.app file:///Applications/CA/arcot/OTPDesktop/html/index.html'
-alias amex-vpn='open /Applications/Pulse\ Secure.app'
-
-alias amex-cd='cd $HOME/projects/amex-reserve-ios'
-alias amex-sprint='open https://shockoe.atlassian.net/secure/RapidBoard.jspa?projectKey=AMEX'
-alias amex-code="open $HOME/projects/amex-reserve-ios/app-code/Reserve.xcworkspace"
-alias amex-repo='open https://bitbucket.org/shockoe/reserve-ios'
-
-function amex-jira {
+function ros-jira {
 	ticketNumber="$1"
 	if [ ! -z $ticketNumber ]; then
-		open "https://shockoe.atlassian.net/browse/AMEX-$ticketNumber"
+		open "https://shkomedicine.atlassian.net/browse/ROS-$ticketNumber"
 	else
-		open https://shockoe.atlassian.net/browse/AMEX
+		open https://shkomedicine.atlassian.net/browse/ROS
 	fi
 }
 
 
 ##############################################
-## Aliases for Sight Reading Factory Project
+## Aliases for SHKO PDMP Project
 ##
+alias pdmp-cd='cd $HOME/projects/pipeline'
+alias pdmp-sprint='open https://shkomedicine.atlassian.net/secure/RapidBoard.jspa?projectKey=PDMP'
+alias pdmp-github='open https://github.com/shkomedicine/shko-pipeline'
 
-alias srf-cd='cd $HOME/projects/srf-app'
-alias srf-code="open $HOME/projects/srf-app/app-code/SRF.xcworkspace"
-alias srf-repo='open https://bitbucket.org/shockoe/reserve-ios'
 
-function srf-jira {
+function pdmp-jira {
 	ticketNumber="$1"
 	if [ ! -z $ticketNumber ]; then
-		open "https://sightreadingfactory.atlassian.net/browse/SRF-$ticketNumber"
+		open "https://shkomedicine.atlassian.net/browse/PDMP-$ticketNumber"
 	else
-		open https://sightreadingfactory.atlassian.net/browse/SRF/
+		open https://shkomedicine.atlassian.net/browse/PDMP
 	fi
 }
