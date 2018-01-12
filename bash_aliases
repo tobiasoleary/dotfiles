@@ -208,6 +208,7 @@ alias mysql-stop="mysql.server stop"
 
 ## MONGODB
 alias mongodb-start="brew services start mongodb"
+alias mongodb-restart="brew services restart mongodb"
 alias mongodb-stop="brew services stop mongodb"
 
 #####################
