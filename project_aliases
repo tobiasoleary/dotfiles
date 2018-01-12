@@ -3,6 +3,14 @@
 ##
 
 ##############################################
+## Aliases for Getting MEAN Learning Project
+##
+alias mean-atom='atom $HOME/projects/getting-MEAN'
+alias mean-cd='cd $HOME/projects/getting-MEAN'
+alias mean-github='open https://github.com/tobiasoleary/getting-MEAN'
+
+
+##############################################
 ## Aliases for SHKO Review of Systems (ROS) Project
 ##
 alias ros-atom='atom $HOME/projects/ros-app/app'
