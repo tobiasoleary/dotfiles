@@ -109,6 +109,7 @@ alias postman="open /Applications/Postman.app"
 alias reminders="open /Applications/Reminders.app"
 alias messages="open /Applications/Messages.app"
 alias fb-messenger="open /Applications/Messenger.app"
+alias keychain="open /Applications/Utilities/Keychain\ Access.app"
 
 ## Sites
 alias github="open https://github.com"
