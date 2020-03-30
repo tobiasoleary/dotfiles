@@ -12,6 +12,9 @@ BIN_PATHS[1]="/usr/local/bin"
 BIN_PATHS[2]="/usr/local/opt/groovy/libexec/bin" # Groovy
 BIN_PATHS[3]="$HOME/.rbenv/bin"
 BIN_PATHS[4]="/usr/local/rbenv/bin" # Sometimes I put rbenv files here.
+BIN_PATHS[5]="/usr/local/opt/apr/bin"
+BIN_PATHS[6]="/usr/local/opt/apr-util/bin"
+BIN_PATHS[7]="/usr/local/opt/openssl@1.1/bin"
 
 
 index=${#BIN_PATHS[*]}
@@ -88,3 +91,23 @@ if [ -f $GIT_PROMPT ]; then
   source $GIT_PROMPT;
   PS1="\u@\h \W\$(__git_ps1 \":%s\")\$ "
 fi
+
+
+
+if [ -d ~/miniconda3 ]; then
+	# >>> conda initialize >>>
+	# !! Contents within this block are managed by 'conda init' !!
+	__conda_setup="$('/Users/tobiasoleary/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+	if [ $? -eq 0 ]; then
+	    eval "$__conda_setup"
+	else
+	    if [ -f "/Users/tobiasoleary/miniconda3/etc/profile.d/conda.sh" ]; then
+	        . "/Users/tobiasoleary/miniconda3/etc/profile.d/conda.sh"
+	    else
+	        export PATH="/Users/tobiasoleary/miniconda3/bin:$PATH"
+	    fi
+	fi
+	unset __conda_setup
+	# <<< conda initialize <<<
+fi
+
